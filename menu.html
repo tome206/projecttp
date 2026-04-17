@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylem.css" />
+    <title>Menu</title>
+  </head>
+
+  <body onload="loadpage()">
+    <main class="page-panel">
+      <section class="menu-category">
+        <h2>Livraison</h2>
+        <div class="menu-grid">
+          <article class="menu-card" id="d1">
+            <h3>Pizzas</h3>
+            <img src="pizza.jpg" alt="Pizzas" />
+            <ul>
+              <li>Pizza Margherita : 7.5 TND</li>
+              <li>Pizza Thon : 10 TND</li>
+              <li>Pizza Fromage : 12 TND</li>
+              <li>Pizza Viandes : 15 TND</li>
+              <li>Pizza Fruits de Mer : 18 TND</li>
+              <li>Pizza Royale : 20 TND</li>
+              <li>Pizza Luxe : 25 TND</li>
+            </ul>
+          </article>
+
+          <article class="menu-card" id="d2">
+            <h3>Burgers</h3>
+            <img src="burg.jpg" alt="Burgers" />
+            <ul>
+              <li>Burger Classique : 8 TND</li>
+              <li>Burger Chicken : 9 TND</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-category dining-only">
+        <h2>Service sur place</h2>
+        <p class="category-note">Ces plats sont disponibles uniquement pour la restauration sur place.</p>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Steak</h3>
+            <img src="steak.jpg" alt="Steak" />
+            <ul>
+              <li>Steak grillé : 18 TND</li>
+              <li>Accompagnement salade</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Beef Wellington</h3>
+            <img src="sliced-beef-wellington.jpeg" alt="Beef Wellington" />
+            <ul>
+              <li>Filet de boeuf en pâte : 24 TND</li>
+              <li>Servi avec sauce champignon</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Soupe de crevettes</h3>
+            <img src="Spicy-Shrimp-Soup.jpg" alt="Soupe de crevettes" />
+            <ul>
+              <li>Soupe crémeuse aux crevettes : 14 TND</li>
+              <li>Servie chaude</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <h2>Avis clients</h2>
+        <p>adam*****@gmail.com : the pizza are good :)</p>
+        <p>saif*****@gmail.com : the Chapit could be better</p>
+        <p>molka*****@gmail.com : i wonder if can add other type of Burgers</p>
+
+        <form class="review-form">
+          <h3>Donnez votre avis</h3>
+          <div class="field">
+            <label for="review-name">Nom</label>
+            <input id="review-name" type="text" placeholder="Votre nom" />
+          </div>
+          <div class="field">
+            <label for="review-text">Votre avis</label>
+            <textarea id="review-text" rows="3" placeholder="Écrivez votre avis..."></textarea>
+          </div>
+          <div class="field rating-grid">
+            <label>Note</label>
+            <select id="review-rating">
+              <option value="5">★★★★★ Excellent</option>
+              <option value="4">★★★★ Bon</option>
+              <option value="3">★★★ Moyen</option>
+              <option value="2">★★ Faible</option>
+              <option value="1">★ Très faible</option>
+            </select>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="control1.js"></script>
+  </body>
+</html>
