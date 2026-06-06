@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylem.css" />
+    <title>Menu</title>
+  </head>
+
+  <body>
+    <main class="page-panel">
+      <section class="menu-category">
+        <h2>Livraison</h2>
+        <div class="menu-grid">
+          <article class="menu-card" id="d1">
+            <h3>Pizzas</h3>
+            <img src="pizza.jpg" alt="Pizzas" />
+            <ul>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Margherita : 7.5 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Thon : 10 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Fromage : 12 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Viandes : 15 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Fruits de Mer : 18 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Royale : 20 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Pizza Luxe : 25 TND
+              </li>
+            </ul>
+          </article>
+
+          <article class="menu-card" id="d2">
+            <h3>Burgers</h3>
+            <img src="burg.jpg" alt="Burgers" />
+            <ul>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Burger Classique : 8 TND
+              </li>
+              <li>
+                <button class="order-btn" onclick="ext()">Commander</button>
+                Burger Chicken : 9 TND
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Message Display -->
+        <div
+          id="messageBox"
+          style="
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #d9dff8;
+          "
+        >
+          <p id="messageContent"></p>
+        </div>
+      </section>
+
+      <section class="menu-category">
+        <h2>Vins</h2>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Vin Rouge Le Château 2016</h3>
+            <img src="chateau-rouge.jpg" alt="Vin Rouge Le Château 2016" />
+            <p class="stock-status in-stock">En stock</p>
+            <ul>
+              <li>Vin rouge Le Château 2016 : 35 TND</li>
+              <li>Parfait avec les plats principaux</li>
+            </ul>
+          </article>
+
+          <article class="menu-card out-of-stock">
+            <h3>Vin Blanc Le Château 2016</h3>
+            <img src="chateau-rouge.jpg" alt="Vin Blanc Le Château 2016" />
+            <p class="stock-status out-of-stock">Épuisé</p>
+            <ul>
+              <li>Vin blanc Le Château 2016 : 32 TND</li>
+              <li>Idéal pour les plats légers</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-category dining-only">
+        <h2>Service sur place</h2>
+        <p class="category-note">
+          Ces plats sont disponibles uniquement pour la restauration sur place.
+        </p>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3>Steak</h3>
+            <img src="steak.jpg" alt="Steak" />
+            <ul>
+              <li>Steak grillé : 18 TND</li>
+              <li>Accompagnement salade</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Beef Wellington</h3>
+            <img src="sliced-beef-wellington.jpeg" alt="Beef Wellington" />
+            <ul>
+              <li>Filet de boeuf en pâte : 24 TND</li>
+              <li>Servi avec sauce champignon</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Soupe de crevettes</h3>
+            <img src="Spicy-Shrimp-Soup.jpg" alt="Soupe de crevettes" />
+            <ul>
+              <li>Soupe crémeuse aux crevettes : 14 TND</li>
+              <li>Servie chaude</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <h3>Magret de canard aux cerises</h3>
+            <img
+              src="pan-seared-duck-breast.webp"
+              alt="Magret de canard aux cerises"
+            />
+            <ul>
+              <li>Magret de canard poêlé avec sauce aux cerises : 22 TND</li>
+              <li>Servi avec légumes de saison</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <h2>Avis clients</h2>
+        <p>adam*****@gmail.com : the pizza are good :)</p>
+        <p>saif*****@gmail.com : the Chapit could be better</p>
+        <p>molka*****@gmail.com : i wonder if can add other type of Burgers</p>
+
+        <form class="review-form">
+          <h3>Donnez votre avis</h3>
+          <div class="field">
+            <label for="review-name">Nom</label>
+            <input id="review-name" type="text" placeholder="Votre nom" />
+          </div>
+          <div class="field">
+            <label for="review-text">Votre avis</label>
+            <textarea
+              id="review-text"
+              rows="3"
+              placeholder="Écrivez votre avis..."
+            ></textarea>
+          </div>
+          <div class="field rating-grid">
+            <label>Note</label>
+            <select id="review-rating">
+              <option value="5">★★★★★ Excellent</option>
+              <option value="4">★★★★ Bon</option>
+              <option value="3">★★★ Moyen</option>
+              <option value="2">★★ Faible</option>
+              <option value="1">★ Très faible</option>
+            </select>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Message Display for Reviews -->
+        <div
+          id="reviewMessageBox"
+          style="
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #d9dff8;
+          "
+        >
+          <p id="reviewMessageContent"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="ajax.js"></script>
+  </body>
+</html>

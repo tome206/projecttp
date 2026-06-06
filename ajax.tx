@@ -1,0 +1,26 @@
+// Handle order buttons
+function afficher(xmldocument) {
+  msg = xmlocument.getElementsByTagName("text");
+  textdiv = msg[1].firstChiled.nodeValue;
+  document.getElementById("").innerHTML = textdiv;
+}
+xhr = null;
+function ext() {
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  } else {
+    alert("404");
+  }
+  if (xhr) {
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr == 200) {
+        xmldocument = xhr.responseXML;
+        afficher(xmldocument);
+      }
+    };
+    xhr.open("GET", "command.xml", true);
+    xhr.send();
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trace Restaurant</title>
+  </head>
+
+  <body onload="loadpage()" background="background.jpg">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Trace Restaurant</h1>
+          <p>Fast food & Dinning</p>
+        </div>
+        <div class="actions">
+          <a class="button secondary" href="si.html" target="contentFrame">Sign in</a>
+          <a class="button secondary" href="su.html" target="contentFrame">Sign up</a>
+        </div>
+      </header>
+
+      <nav class="main-nav">
+        <a href="menu.html" target="contentFrame" class="nav-link">Menu</a>
+        <a href="horaires.html" target="contentFrame" class="nav-link">Horaires</a>
+        <a href="contact.html" target="contentFrame" class="nav-link">Contact</a>
+      </nav>
+
+      <main class="content-frame">
+        <iframe name="contentFrame" src="accuiel.html" id="ir" title="Contenu principal"></iframe>
+      </main>
+
+      <footer>Trace Restaurant © 2025-2026</footer>
+    </div>
+
+    <script src="control.js"></script>
+  </body>
+</html>

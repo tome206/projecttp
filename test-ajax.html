@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test AJAX</title>
+  </head>
+  <body>
+    <main class="page-panel">
+      <h2>Test AJAX Functionality</h2>
+      
+      <section>
+        <h3>1. Test Contact Form with AJAX</h3>
+        <form id="test-contact">
+          <div class="field">
+            <label for="test-name">Nom</label>
+            <input id="test-name" type="text" placeholder="Votre nom" required />
+          </div>
+          <div class="field">
+            <label for="test-email">Email</label>
+            <input id="test-email" type="email" placeholder="Votre email" required />
+          </div>
+          <div class="field">
+            <label for="test-message">Message</label>
+            <textarea id="test-message" rows="3" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit">Test Contact Form</button>
+        </form>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h3>2. Test Review Form with AJAX</h3>
+        <form id="test-review">
+          <div class="field">
+            <label for="test-review-name">Nom</label>
+            <input id="test-review-name" type="text" placeholder="Votre nom" />
+          </div>
+          <div class="field">
+            <label for="test-review-text">Avis</label>
+            <textarea id="test-review-text" rows="3" placeholder="Votre avis..."></textarea>
+          </div>
+          <div class="field">
+            <label for="test-rating">Note</label>
+            <select id="test-rating">
+              <option value="5">★★★★★ Excellent</option>
+              <option value="4">★★★★ Bon</option>
+              <option value="3">★★★ Moyen</option>
+            </select>
+          </div>
+          <button type="submit">Test Review Form</button>
+        </form>
+      </section>
+
+      <section style="margin-top: 20px;">
+        <h3>3. Test Order Button</h3>
+        <button class="test-order-btn">Commander Pizza Margherita</button>
+        <button class="test-order-btn">Commander Burger Classique</button>
+      </section>
+
+      <div id="result" style="margin-top: 30px; padding: 15px; border-radius: 12px; background: rgba(34, 197, 94, 0.2); display: none;">
+        <p id="result-text"></p>
+      </div>
+    </main>
+
+    <script>
+      // Test Contact Form
+      document.getElementById('test-contact').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showResult('✓ Contact form submission successful!');
+      });
+
+      // Test Review Form
+      document.getElementById('test-review').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showResult('✓ Review form submission successful!');
+      });
+
+      // Test Order Buttons
+      document.querySelectorAll('.test-order-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const itemName = this.textContent.replace('Commander ', '');
+          showResult(`✓ Order placed for: ${itemName}`);
+        });
+      });
+
+      function showResult(message) {
+        const resultDiv = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+        resultText.textContent = message;
+        resultDiv.style.display = 'block';
+        setTimeout(() => {
+          resultDiv.style.display = 'none';
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
